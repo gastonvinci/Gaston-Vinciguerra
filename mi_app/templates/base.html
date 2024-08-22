@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Proyecto{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Mi Proyecto</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'agregar_categoria' %}">Agregar Categoría</a></li>
+                <li><a href="{% url 'agregar_producto' %}">Agregar Producto</a></li>
+                <li><a href="{% url 'agregar_cliente' %}">Agregar Cliente</a></li>
+                <li><a href="{% url 'buscar' %}">Buscar Producto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
